@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>IHMMC 2025</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace.js" ></script>
+
+
+  <!-- jquary for counter -->
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/form.css" rel="stylesheet">
+  
+
+</head>
+
+<body class="index-page">
+
+  
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/android-chrome-192x192.png" alt="">
+        <!-- <h1 class="sitename">IHMMC</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#organizer">Organizers</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#sponsors">Sponsors</a></li>
+          <li><a href="index.html#rules">Rules</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="about.html">Register</a> -->
+
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Registration</h2>
+      <p>Registration Page</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row g-4 g-lg-5">
+        
+        <div class="col-lg-7">
+          <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+            <!-- <h3>Team Leader Details:</h3> -->
+            <!-- <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p> -->
+
+            <form id="registration-form" method="POST" name="google-sheet" enctype="multipart/form-data">
+              <!-- Basic Information -->
+              <fieldset>
+                <legend>Team Leader Information</legend>
+                <label for="full-name">Leader Full Name:</label>
+                <input type="text" id="full-name" name="Lfull_name" required>
+            
+                <label for="email">Leader Email Address:</label>
+                <input type="email" id="email" name="Lemail" required>
+            
+                <label for="phone">Leader Phone Number:</label>
+                <input type="tel" id="phone" name="Lphone" maxlength="10" oninput="showWhatsapp()" required>
+                <div id="wp" class="message">This should be a WhatsApp number</div>
+            
+                <label for="coll-name">University/College Name:</label>
+                <input type="text" id="coll-name" name="coll_name" required>
+            
+                <label for="dept-name">Department Name:</label>
+                <input type="text" id="dept-name" name="dept_name" required>
+
+                <label for="country-name">Country Name:</label>
+                <input type="text" id="country-name" name="country_name" required>
+            
+                <label for="year">Year of Study:</label>
+                <select id="year" name="year" required>
+                  <option value="">Select Year</option>
+                  <option value="1">1st</option>
+                  <option value="2">2nd</option>
+                  <option value="3">3rd</option>
+                  <option value="4">4th</option>
+                  <option value="Other">Other</option>
+                </select>
+              </fieldset>
+            
+              <!-- Team Information -->
+              <fieldset>
+                <legend>Team Information</legend>
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" name="team_name" required>
+            
+                <label for="team-members">Number of Team Members:</label>
+                <select id="team-members" name="team_members" onchange="updateTeamFields()" required>
+                  <option value="">Select Option</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+            
+                <div id="team-member-details">
+                  <!-- Member fields will be inserted here based on the selected number -->
+                </div>
+              </fieldset>
+            
+              <!-- Event Participation -->
+              <fieldset>
+                <legend>Event Participation</legend>
+                <label for="event-participation">Will you attend the event?</label><br>
+                
+                <!-- Custom Styled Radio Buttons -->
+                <label class="custom-radio">
+                  <input type="radio" name="event_type" value="offline" required>
+                  <span class="radio-btn"></span>
+                  <span class="radio-label">Offline</span>
+                </label>
+                
+                <label class="custom-radio">
+                  <input type="radio" name="event_type" value="online" required>
+                  <span class="radio-btn"></span>
+                  <span class="radio-label">Online</span>
+                </label>
+              </fieldset>
+              
+            
+              <!-- Payment Information -->
+              <fieldset>
+                <legend>Payment Information</legend>
+                <label for="registration-fee">Registration Fee:</label>
+                <p>Amount: ₹<span id="registration-fee">600</span></p>
+            
+                <label for="upi-id">UPI ID:</label>
+                <div class="upi-field">
+                  <p id="upi">8250270116@kotak811</p>
+                  <sl-copy-button from="upi"></sl-copy-button>
+                </div>
+                <p>Scan the QR Code below to make the payment:</p>
+                <img src="assets/img/qrcode.jpg" alt="UPI QR Code" style="max-width: 200px;" />
+            
+                <label id="payment-reference-label" style="padding-top: 10px;" for="payment-reference">Payment Reference/Transaction ID:</label>
+                <input id="payment-reference" type="text" name="payment_reference" oninput="showTransaction()" required>
+                <div id="transaction_id" class="message">Please verify this Transaction ID before submitting</div>
+            
+                <!-- Screenshot Upload -->
+                <!-- <label for="payment-screenshot" style="padding-top: 10px;">Upload Payment Screenshot:</label>
+                <input type="file" id="payment-screenshot" name="payment_screenshot" accept="image/*" required> -->
+              </fieldset>
+            
+              <!-- Terms and Conditions -->
+              <!-- <fieldset>
+                <legend>Terms and Conditions</legend>
+                <label>
+                  <input type="checkbox" name="terms" required>
+                  I agree to the <a href=""><span style="color: #D9232D;">Rules & Regulations</span></a>.
+                </label>
+              </fieldset> -->
+              <fieldset>
+                <legend>Terms and Conditions</legend>
+                <label>
+                  <input type="checkbox" name="terms" required>
+                  I agree to the <a href="javascript:void(0);" onclick="openPopup()"><span style="color: #D9232D; text-decoration: underline;">Rules & Regulations</span></a>.
+                </label>
+              </fieldset>
+
+              <!-- Popup container for rules & regulations -->
+              <div id="popup" class="popup">
+                <div class="popup-content">
+                  <h2>Rules & Regulations</h2>
+                  <div class="scrollable-box">
+                    <ol>
+                      <li>Open to all college students. Teams can consist of 4 to 6 members.</li>
+                      <li>All participants must register online before the deadline. Late entries will not be accepted.</li>
+                      <li>Participants can use any materials except for pre-made kits or fully assembled models. All materials must be sourced independently.</li>
+                      <li>All models must be original creations. Plagiarism or copying from existing designs will lead to disqualification.</li>
+                      <li>Teams must prepare a brief presentation (maximum 5 minutes) to explain their model's functionality and design process.</li>
+                      <li>Participants must follow safety guidelines when working with tools and materials. The organizing committee will not be responsible for any injuries.</li>
+                      <li>Models will be evaluated based on creativity, functionality, aesthetics, and presentation. Detailed criteria will be provided.</li>
+                      <li>Any behavior deemed unsportsmanlike or violations of the rules may result in disqualification.</li>
+                      <li>Teams must prepare a brief presentation (maximum 5 minutes) to explain their model's functionality and design process.</li>
+                      <li>The Project should be either fully Hardware or Hardware-Software. <span style="color: #D9232D;">No fully Software Projects are allowed.</span></li>
+                      <li>Trophies and Cash Prizes will be awarded for Top 10 teams which also consist of Top 3 and other 5 special prizes.</li>
+                      <li>Accommodation will not be provided by Us. For accommodation <a href="mailto:aechardwareclub2019@gmail.com?subject=Inquiry&body=Hello%20there!%0A%0AI%20would%20like%20to%20ask%20about%20..."><span style="color: #D9232D; text-decoration: underline;">Contact Us.</span></li>
+                    </ol>
+                  </div>
+                  <button onclick="closePopup()">OK</button>
+                </div>
+              </div>
+            
+              <button class="form-btn" type="submit">Complete Registration</button>
+            </form>
+            <div id="loading-spinner">
+              <img src="assets/img/loder.gif" alt="Loading...">
+              <p>Processing your submission...</p>
+            </div>
+            
+            <!-- Popup for WhatsApp group link -->
+            <div id="whatsapp-popup" class="whatsapp-popup" style="display: none;">
+              <div class="whatsapp-popup-content">
+                  <h2>Thank you for registering!</h2>
+                  <p>Click the link below to join our WhatsApp group:</p>
+                  <a href="https://chat.whatsapp.com/GYF6Rnt7Cl4HHdIaWX50D8" target="_blank" class="whatsapp-link">Join WhatsApp Group</a>
+                  <button id="close-popup">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>Contact Info</h3>
+            <!-- <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p> -->
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="content">
+                <h4>Our Location</h4>
+                <p>Asansol Engineering College</p>
+                <p>Asansol - 713305, West Bengal</p>
+                  </div>
+            </div>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="content">
+                <h4>Phone Number</h4>
+                <p>  Subhankar Roy  ( +91 81019 59726 )</p>
+                <p>  Anirban Sinha  ( +91 82502 70116 )</p>
+                <p> Rounak Kayal  ( +91 98323 16617 )</p>
+              </div>
+            </div>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="content">
+                <h4>Email Address</h4>
+                <p>aechardwareclub2019@gmail.com</p>
+                <!-- <p>contact@example.com</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section><!-- /Contact Section -->
+
+
+  <footer id="footer" class="footer dark-background">
+
+    
+
+    <div class="container footer-top">
+      <div class="row gy-4 footer-flex" style="display: flex;">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">AEC Hardware Club</span>
+          </a>
+          <div class="col-lg-2 col-md-3 footer-links" style="width: 250px;">
+            <h4 style="font-size: 22px;">For Queries</h4>
+            <ul>
+              <p> Subhankar Roy  ( +91 81019 59726 )</p>
+              <p> Anirban Sinha  ( +91 82502 70116 )</p>
+              <p> Rounak Kayal  ( +91 98323 16617 )</p>
+              <!-- <li><a href="#">Terms of service</a></li> -->
+              <!-- <li><a href="#">Privacy policy</a></li> -->
+            </ul>
+          </div>
+          <div class="footer-contact pt-3">
+            <p>Asansol Engineering College</p>
+            <p>Asansol - 713305, West Bengal</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 93783 72492</span></p>
+            <p><strong>Email:</strong> <span>aechardwareclub2019@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="mailto:aechardwareclub2019@gmail.com"><i class="bi bi-envelope-at"></i></a>
+            <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
+            <a href="https://www.instagram.com/aec.hardware.club?igsh=NmozcTNwNGhzbHY1"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/aec-hardware-club/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="font-size: 22px;">Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#rules">Rules & Regulations</a></li>
+            <!-- <li><a href="#">Terms of service</a></li> -->
+            <!-- <li><a href="#">Privacy policy</a></li> -->
+          </ul>
+        </div>
+
+        
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">IHMMC 2025</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://www.linkedin.com/in/rishikesh-sharma-a8b842287/" target="_blank">Rishikesh Sharma</a>&nbsp;&&nbsp;<a href="https://www.linkedin.com/in/bratya-roy/" target="_blank">Bratya Roy</a>
+      </div>
+    </div>
+
+  </footer>
+  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="jquery.counterup.min.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/tilt.jquery.js"></script>
+  <div class="circle_img"></div>
+  <script src="js/popper.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/scrollIt.js"></script>
+  <script src="js/wow.min.js"></script>
+
+
+  <script>
+    function showWhatsapp() {
+      const message = document.getElementById('wp');
+      const inputField = document.getElementById('phone');
+      if (inputField.value.length > 0) {
+        message.style.display = 'block'; // Show the message
+      } else {
+        message.style.display = 'none'; // Hide the message
+      }
+    }
+
+    function showTransaction() {
+      const message = document.getElementById('transaction_id');
+      const inputField = document.getElementById('payment-reference');
+      if (inputField.value.length > 0) {
+        message.style.display = 'block'; // Show the message
+      } else {
+        message.style.display = 'none'; // Hide the message
+      }
+    }
+  </script>
+
+</body>
+
+</html>
