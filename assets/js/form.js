@@ -231,7 +231,7 @@ inputs.forEach(input=>{
 function updateTeamFields() {
   const numberOfMembers = document.getElementById('team-members').value;
   const teamMemberDetails = document.getElementById('team-member-details');
-  teamMemberDetails.innerHTML = ''; // Clear any existing fields
+  teamMemberDetails.innerHTML = `<input type="hidden" id="team_number" name="team_number" value="${numberOfMembers}">`; // Clear any existing fields
 
   // Get Leader Information
   const leaderName = document.getElementById('full-name').value;
@@ -245,16 +245,20 @@ function updateTeamFields() {
         // Pre-fill the fields for Member 1
         teamMemberDetails.innerHTML += `
           <label for="member${i}-name">Member ${i + 1} Name:</label>
-          <input type="text" id="member${i}-name" name="team_members[${i}][name]" value="${leaderName}" required>
+          <input type="text" value="${leaderName}" disabled>
+          <input type="hidden" id="member${i}-name" name="team_members[${i}][name]" value="${leaderName}">
 
           <label for="member${i}-department">Member ${i + 1} Department:</label>
-          <input type="text" id="member${i}-department" name="team_members[${i}][department]" value="${leaderDept}" required>
+          <input type="text" value="${leaderDept}" disabled>
+          <input type="hidden" id="member${i}-department" name="team_members[${i}][department]" value="${leaderDept}">
 
           <label for="member${i}-year">Member ${i + 1} Year:</label>
-          <input type="text" id="member${i}-year" name="team_members[${i}][year]" value="${leaderYear}" required>
+          <input type="text" value="${leaderYear}" disabled>
+          <input type="hidden" id="member${i}-year" name="team_members[${i}][year]" value="${leaderYear}">
 
           <label for="member${i}-phone">Member ${i + 1} Phone Number:</label>
-          <input type="tel" id="member${i}-phone" name="team_members[${i}][phone]" pattern="\\d{10}" title="Phone number should be 10 digits" value="${leaderPhone}" required>
+          <input type="tel" value="${leaderPhone}" disabled>
+          <input type="hidden" id="member${i}-phone" name="team_members[${i}][phone]" pattern="\\d{10}" title="Phone number should be 10 digits" value="${leaderPhone}" disabled>
         `;
       } else {
         // For other members, just show empty fields

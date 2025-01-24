@@ -1274,7 +1274,10 @@ label[for="event-participation"] {
   outline: none;
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4); 
 }
-
+input:disabled{
+  background-color: #bbbbbb; /* Light gray background */
+  color: #4e4e4e;          /* Gray text color */
+}
 
 
 /* Style for the popup */
@@ -1370,3 +1373,6 @@ button:hover {
   font-size: 16px;
   color: #fff; /* Adjust text color if needed */
 }
+
+
+/* Announcement */
