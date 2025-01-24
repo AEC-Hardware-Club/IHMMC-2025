@@ -271,7 +271,7 @@ function updateTeamFields() {
 
           <label for="member${i}-year">Member ${i + 1} Year:</label>
             <select id="member${i}-year" name="team_members[${i}][year]" required>
-              <option value="">Select Year</option>
+              <option value="" disabled selected>Select Year</option>
               <option value="1">1st</option>
               <option value="2">2nd</option>
               <option value="3">3rd</option>
