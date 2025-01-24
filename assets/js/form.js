@@ -258,7 +258,7 @@ function updateTeamFields() {
 
           <label for="member${i}-phone">Member ${i + 1} Phone Number:</label>
           <input type="tel" value="${leaderPhone}" disabled>
-          <input type="hidden" id="member${i}-phone" name="team_members[${i}][phone]" pattern="\\d{10}" title="Phone number should be 10 digits" value="${leaderPhone}" disabled>
+          <input type="hidden" id="member${i}-phone" name="team_members[${i}][phone]" pattern="\\d{10}" title="Phone number should be 10 digits" value="${leaderPhone}">
         `;
       } else {
         // For other members, just show empty fields
